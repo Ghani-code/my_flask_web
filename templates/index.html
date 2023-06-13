@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Data Visualization</title>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        border: 1px solid black;
+        padding: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Data Visualization</h1>
+
+    <h2>Order by Day</h2>
+    <table>
+      <tr>
+        <th>Day</th>
+        <th>Order Count</th>
+      </tr>
+      {% for row in orderday.iterrows() %}
+      <tr>
+        <td>{{ row[1]['day'] }}</td>
+        <td>{{ row[1]['BillNo'] }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    <h2>Order by Weekday</h2>
+    <table>
+      <tr>
+        <th>Weekday</th>
+        <th>Order Count</th>
+      </tr>
+      {% for row in orderweek.iterrows() %}
+      <tr>
+        <td>{{ row[1]['week_day'] }}</td>
+        <td>{{ row[1]['BillNo'] }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    <h2>Order by Month</h2>
+    <table>
+      <tr>
+        <th>Month</th>
+        <th>Order Count</th>
+      </tr>
+      {% for row in ordermonth.iterrows() %}
+      <tr>
+        <td>{{ row[1]['month'] }}</td>
+        <td>{{ row[1]['BillNo'] }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    <h2>Order by Year</h2>
+    <table>
+      <tr>
+        <th>Year</th>
+        <th>Order Count</th>
+      </tr>
+      {% for row in orderyear.iterrows() %}
+      <tr>
+        <td>{{ row[1]['year'] }}</td>
+        <td>{{ row[1]['BillNo'] }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    <h2>Top 10 Countries by Order Count</h2>
+    <table>
+      <tr>
+        <th>Country</th>
+        <th>Order Count</th>
+      </tr>
+      {% for row in ordercountry.iterrows() %}
+      <tr>
+        <td>{{ row[1]['Country'] }}</td>
+        <td>{{ row[1]['Count'] }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    <h2>United Kingdom Items</h2>
+    <table>
+      <tr>
+        <th>Item Name</th>
+        <th>Item ID</th>
+      </tr>
+      {% for row in ukitems.iterrows() %}
+      <tr>
+        <td>{{ row[1]['Itemname'] }}</td>
+        <td>{{ row[1]['ItemID'] }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    <h2>Recommended Items for Item ID 67</h2>
+    <ul>
+      {% for item in recommended_items %}
+      <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+
+    </ul>
+  </body>
+</html>
