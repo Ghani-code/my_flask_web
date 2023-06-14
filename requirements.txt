@@ -1,5 +1,4 @@
 
-pyzmq
 packaging
 ipython
 jupyter-client
