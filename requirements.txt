@@ -119,7 +119,6 @@ jupyter
 nbclassic
 wheel
 tensorflow-io-gcs-filesystem
-mlxtend
 pyrsistent
 terminado
 prometheus-client
