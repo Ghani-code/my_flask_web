@@ -1,6 +1,4 @@
 
-
-packaging
 ipython
 jupyter-client
 ipykernel
